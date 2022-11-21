@@ -1,0 +1,82 @@
+C:\wrk\redrift\py-signalr-test-01>py app.py
+player7@vovaa
+C:\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'localhost'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+Login success, user id: 2d302546-46d1-433a-a535-dfe7eaf17510 token: eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjJkMzAyNTQ2LTQ2ZDEtNDMzYS1hNTM1LWRmZTdlYWYxNzUxMCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJwbGF5ZXI3QHZvdmFhIiwidW5pcXVlX25hbWUiOiJwbGF5ZXI3QHZvdmFhIiwic3ViIjoicGxheWVyN0B2b3ZhYSIsImp0aSI6IjA5MWE5NWMwLWJlZWYtNGM4ZC1iYmU3LWNmNWE4ZDEyYTQyMSIsImV4cCI6MTY2OTMyMDQ5NSwiaXNzIjoiUmVkIFJpZnQifQ.BPOUfLPoYzFD2q9OiTZuPiKBJzQ1jfyFQ__odNlpWy0
+C:\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'localhost'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+Connected to Lobby
+Signing for Casual match...
+C:\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'localhost'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+sign_for_auto_match:  <Response [200]>
+got LobbyUpdate
+messages type  <class 'list'>
+messages[0] type  <class 'str'>
+LobbyUpdate: Action: Created
+got LobbyUpdate
+messages type  <class 'list'>
+messages[0] type  <class 'str'>
+LobbyUpdate: Action: Started
+STARTED!
+gonna start game
+C:\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'localhost'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+connected to Game
+game_hub type  <class 'signalrcore.hub.auth_hub_connection.AuthHubConnection'>
+gonna send ReadyToPlay
+--- got signal DropConnection
++ Type: Ping
+--- got signal DropConnection
+INIT!
+stored INIT to file
+--- got signal DropConnection
++ Type: Ping
+--- got signal DropConnection
++ $type: CoE.Shared.GameCore.LogicEvents.StartGame, CoE.Shared
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeCardsState, CoE.Shared', 'OldState': 0, 'NewState': 4, 'CardIds': [265, 270, 286, 314, 315, 304, 305]}
+--- got signal DropConnection
++ $type: CoE.Shared.GameCore.LogicEvents.ChangeCardsPositions, CoE.Shared
++ $type: CoE.Shared.GameCore.LogicEvents.ChangeCardsPositions, CoE.Shared
++ $type: CoE.Shared.GameCore.LogicEvents.ChangeCardsPositions, CoE.Shared
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeCardsState, CoE.Shared', 'OldState': 4, 'NewState': 1, 'CardIds': [314, 315, 304, 305]}
+--- got signal DropConnection
++ $type: CoE.Shared.GameCore.LogicEvents.ChangeCardsPositions, CoE.Shared
++ $type: CoE.Shared.GameCore.LogicEvents.ChangeCardsPositions, CoE.Shared
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeCardsState, CoE.Shared', 'OldState': 4, 'NewState': 1, 'CardIds': [265, 270, 286]}
+--- got signal DropConnection
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeObjectMoves, CoE.Shared', 'Max': 1, 'From': 1, 'To': 0, 'Id': 260}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeAttackToHeroCount, CoE.Shared', 'Max': 1, 'From': 1, 'To': 0, 'Id': 260}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangePlayerMana, CoE.Shared', 'Max': 1, 'From': 0, 'To': 1, 'Id': '2b3d5a7e-2219-4e91-85c9-1b82f871e132'}
++ $type: CoE.Shared.GameCore.LogicEvents.ChangeSacrificesAttempts, CoE.Shared
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeObjectMoves, CoE.Shared', 'Max': 1, 'From': 0, 'To': 1, 'Id': 292}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeAttackToHeroCount, CoE.Shared', 'Max': 1, 'From': 0, 'To': 1, 'Id': 292}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.TurnGame, CoE.Shared', 'EndTime': '2022-11-21T12:11:08.8466734Z', 'Turn': 2, 'Round': 1, 'OwnerId': '2b3d5a7e-2219-4e91-85c9-1b82f871e132', 'State': 'Game'}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeCardsState, CoE.Shared', 'OldState': 0, 'NewState': 4, 'CardIds': [297, 301]}
+--- got signal DropConnection
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeCardsState, CoE.Shared', 'OldState': 4, 'NewState': 4, 'CardIds': [297]}
+--- got signal DropConnection
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangePlayerMana, CoE.Shared', 'Max': 1, 'From': 1, 'To': 6, 'Id': '2b3d5a7e-2219-4e91-85c9-1b82f871e132'}
+--- got signal DropConnection
++ $type: CoE.Shared.GameCore.LogicEvents.ChangeCardsPositions, CoE.Shared
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangePlayerMana, CoE.Shared', 'Max': 1, 'From': 6, 'To': 1, 'Id': '2b3d5a7e-2219-4e91-85c9-1b82f871e132'}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeObjectMoves, CoE.Shared', 'Max': 1, 'From': 1, 'To': 0, 'Id': 315}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeAttackToHeroCount, CoE.Shared', 'Max': 1, 'From': 1, 'To': 0, 'Id': 315}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeCardsState, CoE.Shared', 'OldState': 1, 'NewState': 2, 'CardIds': [315]}
+--- got signal DropConnection
++ $type: CoE.Shared.GameCore.LogicEvents.StartEffect, CoE.Shared
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeCardsState, CoE.Shared', 'OldState': 0, 'NewState': 4, 'CardIds': [322]}
+--- got signal DropConnection
++ $type: CoE.Shared.GameCore.LogicEvents.DeleteObjectEffect, CoE.Shared
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeObjectMoves, CoE.Shared', 'Max': 1, 'From': 0, 'To': 0, 'Id': 315}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeAttackToHeroCount, CoE.Shared', 'Max': 1, 'From': 0, 'To': 0, 'Id': 315}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeObjectMoves, CoE.Shared', 'Max': 1, 'From': 1, 'To': 0, 'Id': 292}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeAttackToHeroCount, CoE.Shared', 'Max': 1, 'From': 1, 'To': 0, 'Id': 292}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangePlayerMana, CoE.Shared', 'Max': 2, 'From': 1, 'To': 2, 'Id': '2d302546-46d1-433a-a535-dfe7eaf17510'}
++ $type: CoE.Shared.GameCore.LogicEvents.ChangeSacrificesAttempts, CoE.Shared
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeObjectMoves, CoE.Shared', 'Max': 1, 'From': 0, 'To': 1, 'Id': 260}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeAttackToHeroCount, CoE.Shared', 'Max': 1, 'From': 0, 'To': 1, 'Id': 260}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.TurnGame, CoE.Shared', 'EndTime': '2022-11-21T12:12:11.8674469Z', 'Turn': 3, 'Round': 2, 'OwnerId': '2d302546-46d1-433a-a535-dfe7eaf17510', 'State': 'Game'}
+{'$type': 'CoE.Shared.GameCore.LogicEvents.ChangeCardsState, CoE.Shared', 'OldState': 0, 'NewState': 4, 'CardIds': [279, 276]}
+--- got signal DropConnection
+{'$type': 'CoE.Shared.GameCore.LogicEvents.TechnicalEndGame, CoE.Shared', 'Reason': 'Afk', 'LooserId': '2d302546-46d1-433a-a535-dfe7eaf17510', 'WinnerId': '2b3d5a7e-2219-4e91-85c9-1b82f871e132'}

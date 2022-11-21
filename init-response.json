@@ -1,0 +1,2617 @@
+{
+    "$type": "CoE.Shared.GameCore.LogicEvents.InitializeGame, CoE.Shared",
+    "PlayerContexts": [{
+            "$type": "CoE.Shared.GameCore.RuntimeObjects.PlayerContext, CoE.Shared",
+            "Crystals": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "SacrificesAttempts": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 0,
+                "Default": 0
+            },
+            "IsBot": false,
+            "IsConnected": true,
+            "IsFinishedMulligan": false,
+            "IsFirstMover": true,
+            "IsReady": false,
+            "IsWaitingForLongManaGain": false,
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "ConnectedTimeOut": "2022-11-21T12:10:58.6066941Z",
+            "RuntimeEthernalId": 261,
+            "RuntimeHeroId": 260,
+            "TurnsWithoutCards": 0,
+            "UserId": "2d302546-46d1-433a-a535-dfe7eaf17510"
+        }, {
+            "$type": "CoE.Shared.GameCore.RuntimeObjects.PlayerContext, CoE.Shared",
+            "Crystals": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "SacrificesAttempts": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 0,
+                "Default": 0
+            },
+            "IsBot": false,
+            "IsConnected": true,
+            "IsFinishedMulligan": false,
+            "IsFirstMover": false,
+            "IsReady": true,
+            "IsWaitingForLongManaGain": false,
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "ConnectedTimeOut": "2022-11-21T12:10:58.6066946Z",
+            "RuntimeEthernalId": 293,
+            "RuntimeHeroId": 292,
+            "TurnsWithoutCards": 0,
+            "UserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132"
+        }
+    ],
+    "RuntimeData": [{
+            "$type": "CoE.Shared.GameCore.Models.HeroRuntimeData, CoE.Shared",
+            "Id": 260,
+            "DataId": "Adventurer-human-Starter_Adventurer-full",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 30,
+                "Current": 30,
+                "Default": 30
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Starter_Adventurer"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.Data.EthernalRuntimeData, CoE.Shared",
+            "Id": 261,
+            "DataId": "Ethernals-beast-light-Shining_Panther",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Draw_4_Activation"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 262,
+            "DataId": "COE-0000005-Card-Creature-elemental-Fire-none-Bird_of_Fire",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Reincarnation", "Buff_1_Atk_after_you_spawn_spell"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 263,
+            "DataId": "COE-0000005-Card-Creature-elemental-Fire-none-Bird_of_Fire",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Reincarnation", "Buff_1_Atk_after_you_spawn_spell"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 264,
+            "DataId": "COE-0000016-Card-Creature-elemental-Nature-none-Wild_Plant",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "IgnoreGuardian", "Requiem_Buff_1_Atk_all_your_creature_after_death"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 265,
+            "DataId": "COE-0000016-Card-Creature-elemental-Nature-none-Wild_Plant",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "IgnoreGuardian", "Requiem_Buff_1_Atk_all_your_creature_after_death"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 266,
+            "DataId": "COE-0000001-Card-Creature-demon-Chaos-none-Imp_barbarian",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Bloodlust"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 267,
+            "DataId": "COE-0000001-Card-Creature-demon-Chaos-none-Imp_barbarian",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Bloodlust"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 268,
+            "DataId": "COE-0000025-Card-Creature-troll-Earth-none-Overlord",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Guardian"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 269,
+            "DataId": "COE-0000025-Card-Creature-troll-Earth-none-Overlord",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Guardian"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 270,
+            "DataId": "COE-0000002-Card-Creature-beast-Chaos-none-Troll_Crusher",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Whirlwind"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 271,
+            "DataId": "COE-0000002-Card-Creature-beast-Chaos-none-Troll_Crusher",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Whirlwind"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 272,
+            "DataId": "COE-0000010-Card-Relic-Thunder-Lightning_Shield",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Deal_1_Damage_after_attacked_attacker_creature"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 273,
+            "DataId": "COE-0000010-Card-Relic-Thunder-Lightning_Shield",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Deal_1_Damage_after_attacked_attacker_creature"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 274,
+            "DataId": "COE-0000006-Card-Spell-Fire-Unquenchable_weapon",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Buff_1Atk_all_your_creature_Unquenchable_weapon"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 275,
+            "DataId": "COE-0000006-Card-Spell-Fire-Unquenchable_weapon",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Buff_1Atk_all_your_creature_Unquenchable_weapon"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 276,
+            "DataId": "COE-0000026-Card-Creature-elemental-Earth-none-Goon",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Guardian", "Fortitude", "Feel_No_Pain"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 277,
+            "DataId": "COE-0000026-Card-Creature-elemental-Earth-none-Goon",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Guardian", "Fortitude", "Feel_No_Pain"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 278,
+            "DataId": "COE-0000007-Card-Relic-Fire-Scythe_of_fire",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Destroy_creature_3HP_or_less_activation"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 279,
+            "DataId": "COE-0000007-Card-Relic-Fire-Scythe_of_fire",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Destroy_creature_3HP_or_less_activation"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 280,
+            "DataId": "COE-0000129-Card-Creature-Light-Originative_New_Ray",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "GivePlagueAfterAttack"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 281,
+            "DataId": "COE-0000129-Card-Creature-Light-Originative_New_Ray",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "GivePlagueAfterAttack"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 282,
+            "DataId": "COE-0000017-Card-Relic-Nature-Armor_of_Spring",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Draw_1_after_allied_creature_death"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 283,
+            "DataId": "COE-0000017-Card-Relic-Nature-Armor_of_Spring",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Draw_1_after_allied_creature_death"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 284,
+            "DataId": "COE-0000008-Card-Creature-fairy-Thunder-none-Living_Lightning",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "GivePlague_HighestHp"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 285,
+            "DataId": "COE-0000008-Card-Creature-fairy-Thunder-none-Living_Lightning",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "GivePlague_HighestHp"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 286,
+            "DataId": "COE-0000004-Card-Relic-Chaos-Barrage_morningstar",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Buff_1Atk_all_your_creature_after_your_Adventurer_attack"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 287,
+            "DataId": "COE-0000004-Card-Relic-Chaos-Barrage_morningstar",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Buff_1Atk_all_your_creature_after_your_Adventurer_attack"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 288,
+            "DataId": "COE-0000015-Card-Creature-beast-Nature-none-Night_Hunter",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Supremacy", "Buff_-1Atk_after_attack_attacked_creature"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 289,
+            "DataId": "COE-0000131-Card-Creature-beast-Chaos-none-Impenetrable",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Supremacy"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 290,
+            "DataId": "COE-0000131-Card-Creature-beast-Chaos-none-Impenetrable",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Supremacy"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 291,
+            "DataId": "COE-0000027-Card-Creature-elemental-Earth-none-Sand_Serpent",
+            "OwnerUserId": "2d302546-46d1-433a-a535-dfe7eaf17510",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Reflect_Damage_Opponent_Creature"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.HeroRuntimeData, CoE.Shared",
+            "Id": 292,
+            "DataId": "Adventurer-human-Starter_Adventurer-full",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 30,
+                "Current": 30,
+                "Default": 30
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Starter_Adventurer"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.Data.EthernalRuntimeData, CoE.Shared",
+            "Id": 293,
+            "DataId": "Ethernals-beast-light-Shining_Panther",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Draw_4_Activation"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 294,
+            "DataId": "COE-0000001-Card-Creature-demon-Chaos-none-Imp_barbarian",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Bloodlust"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 295,
+            "DataId": "COE-0000001-Card-Creature-demon-Chaos-none-Imp_barbarian",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Bloodlust"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 296,
+            "DataId": "COE-0000025-Card-Creature-troll-Earth-none-Overlord",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Guardian"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 297,
+            "DataId": "COE-0000025-Card-Creature-troll-Earth-none-Overlord",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Guardian"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 298,
+            "DataId": "COE-0000131-Card-Creature-beast-Chaos-none-Impenetrable",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Supremacy"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 299,
+            "DataId": "COE-0000131-Card-Creature-beast-Chaos-none-Impenetrable",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Supremacy"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 300,
+            "DataId": "COE-0000010-Card-Relic-Thunder-Lightning_Shield",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Deal_1_Damage_after_attacked_attacker_creature"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 301,
+            "DataId": "COE-0000010-Card-Relic-Thunder-Lightning_Shield",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Deal_1_Damage_after_attacked_attacker_creature"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 302,
+            "DataId": "COE-0000129-Card-Creature-Light-Originative_New_Ray",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "GivePlagueAfterAttack"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 303,
+            "DataId": "COE-0000129-Card-Creature-Light-Originative_New_Ray",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "GivePlagueAfterAttack"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 304,
+            "DataId": "COE-0000017-Card-Relic-Nature-Armor_of_Spring",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Draw_1_after_allied_creature_death"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 305,
+            "DataId": "COE-0000017-Card-Relic-Nature-Armor_of_Spring",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Draw_1_after_allied_creature_death"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 306,
+            "DataId": "COE-0000005-Card-Creature-elemental-Fire-none-Bird_of_Fire",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Reincarnation", "Buff_1_Atk_after_you_spawn_spell"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 307,
+            "DataId": "COE-0000005-Card-Creature-elemental-Fire-none-Bird_of_Fire",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Reincarnation", "Buff_1_Atk_after_you_spawn_spell"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 308,
+            "DataId": "COE-0000027-Card-Creature-elemental-Earth-none-Sand_Serpent",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Reflect_Damage_Opponent_Creature"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 309,
+            "DataId": "COE-0000016-Card-Creature-elemental-Nature-none-Wild_Plant",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "IgnoreGuardian", "Requiem_Buff_1_Atk_all_your_creature_after_death"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 310,
+            "DataId": "COE-0000016-Card-Creature-elemental-Nature-none-Wild_Plant",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "IgnoreGuardian", "Requiem_Buff_1_Atk_all_your_creature_after_death"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 311,
+            "DataId": "COE-0000004-Card-Relic-Chaos-Barrage_morningstar",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Buff_1Atk_all_your_creature_after_your_Adventurer_attack"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 312,
+            "DataId": "COE-0000004-Card-Relic-Chaos-Barrage_morningstar",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Buff_1Atk_all_your_creature_after_your_Adventurer_attack"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 313,
+            "DataId": "COE-0000026-Card-Creature-elemental-Earth-none-Goon",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Guardian", "Fortitude", "Feel_No_Pain"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 314,
+            "DataId": "COE-0000026-Card-Creature-elemental-Earth-none-Goon",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 6,
+                "Current": 6,
+                "Default": 6
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Guardian", "Fortitude", "Feel_No_Pain"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 315,
+            "DataId": "COE-0000002-Card-Creature-beast-Chaos-none-Troll_Crusher",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Whirlwind"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 316,
+            "DataId": "COE-0000002-Card-Creature-beast-Chaos-none-Troll_Crusher",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Whirlwind"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 317,
+            "DataId": "COE-0000015-Card-Creature-beast-Nature-none-Night_Hunter",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 4,
+                "Current": 4,
+                "Default": 4
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "Supremacy", "Buff_-1Atk_after_attack_attacked_creature"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 318,
+            "DataId": "COE-0000007-Card-Relic-Fire-Scythe_of_fire",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Destroy_creature_3HP_or_less_activation"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 319,
+            "DataId": "COE-0000007-Card-Relic-Fire-Scythe_of_fire",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 5,
+                "Current": 5,
+                "Default": 5
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Destroy_creature_3HP_or_less_activation"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 320,
+            "DataId": "COE-0000008-Card-Creature-fairy-Thunder-none-Living_Lightning",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "GivePlague_HighestHp"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 321,
+            "DataId": "COE-0000008-Card-Creature-fairy-Thunder-none-Living_Lightning",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 3,
+                "Current": 3,
+                "Default": 3
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["GenericAttack", "GivePlague_HighestHp"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 322,
+            "DataId": "COE-0000006-Card-Spell-Fire-Unquenchable_weapon",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Buff_1Atk_all_your_creature_Unquenchable_weapon"],
+            "ImmuneToEffects": []
+        }, {
+            "$type": "CoE.Shared.GameCore.Models.CardRuntimeData, CoE.Shared",
+            "State": 0,
+            "PreviousState": 0,
+            "RelativePositionX": 0,
+            "Id": 323,
+            "DataId": "COE-0000006-Card-Spell-Fire-Unquenchable_weapon",
+            "OwnerUserId": "2b3d5a7e-2219-4e91-85c9-1b82f871e132",
+            "Hp": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "Mana": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 2,
+                "Current": 2,
+                "Default": 2
+            },
+            "Attack": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 0,
+                "Current": 0,
+                "Default": 0
+            },
+            "MoveCount": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "AttackHeroMove": {
+                "$type": "CoE.Shared.GameCore.IntStat, CoE.Shared",
+                "Max": 1,
+                "Current": 1,
+                "Default": 1
+            },
+            "ImposingEffects": ["Buff_1Atk_all_your_creature_Unquenchable_weapon"],
+            "ImmuneToEffects": []
+        }
+    ]
+}

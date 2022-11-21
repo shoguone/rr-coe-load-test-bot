@@ -1,11 +1,12 @@
+import json
 import logging
+import requests
+from signalrcore.hub_connection_builder import HubConnectionBuilder
 import sys
 sys.path.append("./")
-from signalrcore.hub_connection_builder import HubConnectionBuilder
-import requests
-import json
+
 from game_signal_enum import GameSignal
-from game_event_enum import GameEvent
+from message_handler import MessageProcessor
 
 email = 'player7@vovaa'
 password = 'vovaa'
@@ -28,6 +29,8 @@ login_url = base_url + '/api/v1/Identity/Login'
 sign_auto_url = base_url + '/api/v1/Lobby/SignForAutoMatch'
 
 game_hub = None
+
+local_context = {}
 
 def log_in():
     r = requests.post(url=login_url, json=login_data, verify=False)
@@ -65,16 +68,13 @@ def on_connected_to_lobby():
 
 def on_lobby_update(messages):
     print('got LobbyUpdate')
-    print('messages type ', type(messages))
     message = messages[0]
-    print('messages[0] type ', type(message))
     argObj = json.loads(message)
-    # print('LobbyUpdate: ', argObj)
 
     action = argObj['Action']
     print('LobbyUpdate: Action: ' + action)
     if action == 'Started':
-        print('STARTED!')
+        print('Lobby: STARTED! Connecting to game hub...')
         lobby_hub.stop()
         init_game_hub()
 
@@ -83,58 +83,38 @@ def init_game_hub():
     game_hub = connect_to_hub(game_hub_url)
 
     def on_connected_to_game():
-        print('connected to Game')
-        print('game_hub type ', type(game_hub))
-        print('gonna send ReadyToPlay')
+        print('connected to Game, sending ReadyToPlay...')
         game_hub.send('ReadyToPlay', [])
 
     game_hub.on_open(on_connected_to_game)
     game_hub.on_close(lambda: print("Game closed"))
     for signal_type_enum in GameSignal:
-        game_hub.on(signal_type_enum.name, \
-            lambda msgs: on_game_message(signal_type_enum.name, msgs))
+        game_hub.on(signal_type_enum.value, \
+            lambda msgs: on_game_message(signal_type_enum.value, msgs))
     game_hub.start()
 
 
 def on_game_message(signal_type, message_list):
-    print('got signal ' + signal_type)
+    print('--- got signal ' + signal_type)
     for message in message_list:
-        # print('message', message)
         message_type = type(message)
-        print('message type', message_type)
         if message_type is str:
-            print('message is str, deserializing...')
             message = json.loads(message)
 
         message_type = type(message)
         if message_type is list:
-            print('message is list, let`s see each item...')
             for item in message:
-                item_type = type(item)
-                print('item type', item_type)
+                # item_type = type(item)
                 handle_single_message_event(item)
         elif message_type is dict:
-            print('message is dict, OK')
             handle_single_message_event(message)
 
 def handle_single_message_event(message):
-    # message is supposed to be dict
-    print('handle message')
-    # print('handle message', message)
-    message_type = type(message)
-    print('message type', message_type)
-    message_type1_field = message.get('Type')
-    message_type2_field = message.get('$type')
-    event_type = None
-    if message_type1_field is not None:
-        print('Type: ', message_type1_field)
-        event_type = message_type1_field
-    if message_type2_field is not None:
-        print('$type: ', message_type2_field)
-        event_type = message_type2_field
-    
-    if event_type == GameEvent.InitializeGame.value:
-        print("INIT!")
+    message_processor = local_context.get('message_processor')
+    if message_processor is None:
+        message_processor = MessageProcessor()
+        local_context['message_processor'] = message_processor
+    message_processor.handle_single_message_event(message)
 
 
 user_id, token = log_in()
@@ -153,9 +133,11 @@ message = None
 # Do login
 
 while message != "exit()":
-    message = input(">> ")
-    if message is not None and message != "" and message != "exit()":
-        lobby_hub.send("SendMessage", [message])
+    message = input()
+    args = message.split()
+    if len(args) > 0 and message != "exit()":
+        method = args[0]
+        lobby_hub.send(method, message[1:])
 
 lobby_hub.stop()
 game_hub.stop()

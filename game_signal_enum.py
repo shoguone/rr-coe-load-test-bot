@@ -1,16 +1,15 @@
 from enum import Enum
 
-GameSignal = Enum('GameSignal', [
-    'None',
-    'Ping',
-    'LobbyUpdate',
-    'GameAction',
-    'GameVisual',
-    'Direct',
-    'LogicEvents',
-    'Colosseum',
+class GameSignal(Enum):
+    Nothing = 'None'
+    Ping = 'Ping'
+    LobbyUpdate = 'LobbyUpdate'
+    GameAction = 'GameAction'
+    GameVisual = 'GameVisual'
+    Direct = 'Direct'
+    LogicEvents = 'LogicEvents'
+    Colosseum = 'Colosseum'
 
-    'TimeOut',
-    'Error',
-    'DropConnection'
-])
+    TimeOut = 'TimeOut'
+    Error = 'Error'
+    DropConnection = 'DropConnection'
