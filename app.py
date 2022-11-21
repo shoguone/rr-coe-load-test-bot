@@ -5,6 +5,7 @@ from signalrcore.hub_connection_builder import HubConnectionBuilder
 import requests
 import json
 from game_signal_enum import GameSignal
+from game_event_enum import GameEvent
 
 email = 'player7@vovaa'
 password = 'vovaa'
@@ -26,30 +27,14 @@ game_hub_url = base_url + '/hubs/game'
 login_url = base_url + '/api/v1/Identity/Login'
 sign_auto_url = base_url + '/api/v1/Lobby/SignForAutoMatch'
 
-# game_signals = [
-#     'None',
-#     'Ping',
-#     'LobbyUpdate',
-#     'GameAction',
-#     'GameVisual',
-#     'Direct',
-#     'LogicEvents',
-#     'Colosseum',
-
-#     'TimeOut',
-#     'Error',
-#     'DropConnection'
-# ]
-
-init_game_event = 'CoE.Shared.GameCore.LogicEvents.InitializeGame, CoE.Shared'
-
 game_hub = None
 
-def get_token():
+def log_in():
     r = requests.post(url=login_url, json=login_data, verify=False)
-    access_token = r.json()['accessToken']
-    print('Login success, token: ' + access_token)
-    return access_token
+    response_json = r.json()
+    access_token = response_json['accessToken']
+    id = response_json['id']
+    return id, access_token
 
 def sign_for_auto_match(game_mode):
     print('Signing for ' + game_mode + ' match...')
@@ -105,7 +90,6 @@ def init_game_hub():
 
     game_hub.on_open(on_connected_to_game)
     game_hub.on_close(lambda: print("Game closed"))
-    # for signal_type in game_signals:
     for signal_type_enum in GameSignal:
         game_hub.on(signal_type_enum.name, \
             lambda msgs: on_game_message(signal_type_enum.name, msgs))
@@ -149,11 +133,12 @@ def handle_single_message_event(message):
         print('$type: ', message_type2_field)
         event_type = message_type2_field
     
-    if event_type == init_game_event:
+    if event_type == GameEvent.InitializeGame.value:
         print("INIT!")
 
 
-token = get_token()
+user_id, token = log_in()
+print('Login success, user id:', user_id, 'token:', token)
 
 lobby_hub = connect_to_hub(lobby_hub_url)
 
