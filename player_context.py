@@ -12,6 +12,9 @@ class PlayerContext():
     def get_user_id(self) -> str:
         return self.player_data.get('UserId')
 
+    def get_is_first_mover(self) -> bool:
+        return self.player_data.get('IsFirstMover')
+
     def is_user_id(self, user_id) -> bool:
         return self.get_user_id() == user_id
 

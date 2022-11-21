@@ -7,13 +7,23 @@ from runtime_object import RuntimeObject
 class RuntimeContext():
     def __init__(self, player_id, init_game_message) -> None:
         self.self_id = player_id
-        players_contexts = init_game_message[0]['PlayerContexts']
-        runtime_data = init_game_message[0]['RuntimeData']
+
+        players_contexts = init_game_message['PlayerContexts']
+        runtime_data = init_game_message['RuntimeData']
+
         self.player, self.opponent = self.__get_players(players_contexts)
         self.cards, self.heroes, self.pets = self.__get_runtime_data(runtime_data)
-        # todo : store timer params:
-        # is_player_turn
-        # timer_state
+
+        self.timer_owner = self.player.get_user_id() \
+            if self.player.get_is_first_mover() \
+            else self.opponent.get_user_id()
+        print('  ** self.timer_owner', self.timer_owner)
+    
+    def is_player_turn(self):
+        return self.timer_owner == self.self_id
+
+    def set_timer_owner(self, owner_id):
+        self.timer_owner = owner_id
 
     def __get_players(self, players_contexts) -> Tuple[PlayerContext, PlayerContext]:
         player = None

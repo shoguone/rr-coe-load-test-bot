@@ -13,10 +13,21 @@ class RuntimeCard(RuntimeObject):
         return self.runtime_object.get('State') == state
 
     def is_state_in_hand(self):
-        return self.__is_state(self.runtime_object, RuntimeCardState.InHand.value)
+        return self.__is_state(RuntimeCardState.InHand.value)
 
-    def is_state_in_deck(self):
-        return self.__is_state(self.runtime_object, RuntimeCardState.InDeck.value)
+    def is_state_on_table(self):
+        return self.__is_state(RuntimeCardState.InTable.value)
+
+    def is_state_in_choose(self):
+        return self.__is_state(RuntimeCardState.InChoose.value)
+
+    def has_moves(self):
+        move_count = self.runtime_object.get('MoveCount')
+        return move_count is not None and move_count['Current'] > 0
+
+    def has_attack_hero_moves(self):
+        move_count = self.runtime_object.get('AttackHeroMove')
+        return move_count is not None and move_count['Current'] > 0
 
     def has_imposing_effect(self, effect_name):
         imposing_effects = self.runtime_object.get('ImposingEffects')

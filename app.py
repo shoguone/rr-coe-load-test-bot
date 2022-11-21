@@ -6,7 +6,7 @@ import sys
 sys.path.append("./")
 
 from game_signal_enum import GameSignal
-from message_handler import MessageProcessor
+from message_processor import MessageProcessor
 
 email = 'player7@vovaa'
 password = 'vovaa'
@@ -109,13 +109,29 @@ def on_game_message(signal_type, message_list):
         elif message_type is dict:
             handle_single_message_event(message)
 
+def send_choose_card():
+    # PerformCommand
+    pass
+
 def handle_single_message_event(message):
     message_processor = local_context.get('message_processor')
     if message_processor is None:
-        message_processor = MessageProcessor()
+        message_processor = MessageProcessor(user_id)
         local_context['message_processor'] = message_processor
-    message_processor.handle_single_message_event(message)
 
+        message_processor.on_choose_card(lambda c:
+            print(' * fire: on_choose_card', c))
+
+        message_processor.on_play_card(lambda c:
+            print(' * fire: on_play_card', c))
+
+        message_processor.on_attack_target(lambda c, t:
+            print(' * fire: on_attack_target', c, t))
+
+        message_processor.on_pass_turn(lambda:
+            print(' * fire: on_pass_turn'))
+
+    message_processor.handle_single_message_event(message)
 
 user_id, token = log_in()
 print('Login success, user id:', user_id, 'token:', token)
