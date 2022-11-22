@@ -1,12 +1,114 @@
 import json
 import logging
+import os
+import signal
 import requests
 from signalrcore.hub_connection_builder import HubConnectionBuilder
 import sys
+from game_hub import GameHub
 sys.path.append("./")
 
-from game_signal_enum import GameSignal
-from message_processor import MessageProcessor
+base_url = 'https://localhost:7194'
+lobby_hub_url = base_url + '/hubs/lobby'
+game_hub_url = base_url + '/hubs/game'
+login_url = base_url + '/api/v1/Identity/Login'
+sign_auto_url = base_url + '/api/v1/Lobby/SignForAutoMatch'
+
+class App():
+    def __init__(self, login_url, login_data) -> None:
+        self.login_url = login_url
+        self.login_data = login_data
+        self.current_hub_connection = None
+
+    def start(self):
+        self.__request_log_in()
+        print('Login success, user id:', self.player_id, 'token:', self.access_token)
+
+        self.current_hub_connection = self.__init_lobby_hub()
+
+        self.__read()
+
+    def __init_lobby_hub(self):
+        lobby_hub = self.__connect_to_hub(lobby_hub_url)
+
+        lobby_hub.on_open(self.__on_connected_to_lobby)
+        lobby_hub.on_close(lambda: print("Lobby closed"))
+
+        lobby_hub.on("LobbyUpdate", self.__on_lobby_update)
+        lobby_hub.start()
+        return lobby_hub
+
+    def __init_game_hub(self):
+        print('Connecting to GameHub...')
+        game_hub_connection = self.__connect_to_hub(game_hub_url)
+        game_hub = GameHub(game_hub_connection, self.player_id)
+        game_hub.on_exit(self.__exit)
+        game_hub.start()
+        return game_hub_connection
+
+    # handler = logging.StreamHandler()
+    # handler.setLevel(logging.DEBUG)
+    def __connect_to_hub(self, url):
+        return HubConnectionBuilder()\
+            .with_url(url, options={
+                "access_token_factory": lambda: self.access_token,
+                "verify_ssl": False
+            }) \
+            .with_automatic_reconnect({
+                "type": "interval",
+                "keep_alive_interval": 10,
+                "intervals": [1, 3, 5, 6, 7, 87, 3]
+            }) \
+            .build()
+            # .configure_logging(logging.DEBUG, socket_trace=True, handler=handler)
+
+    def __on_connected_to_lobby(self):
+        print('Connected to Lobby')
+        self.__request_sign_for_auto_match('Casual')
+
+    def __on_lobby_update(self, messages):
+        print('got LobbyUpdate')
+        message = messages[0]
+        argObj = json.loads(message)
+
+        action = argObj['Action']
+        print('LobbyUpdate: Action: ' + action)
+        if action == 'Started':
+            print('Lobby: STARTED! Connecting to game hub...')
+            self.current_hub_connection.stop()
+            self.current_hub_connection = self.__init_game_hub()
+
+    def __request_log_in(self):
+        r = requests.post(
+                url=self.login_url,
+                json=self.login_data,
+                verify=False)
+        response_json = r.json()
+        self.player_id = response_json['id']
+        self.access_token = response_json['accessToken']
+
+    def __request_sign_for_auto_match(self, game_mode):
+        print('Signing for ' + game_mode + ' match...')
+        headers = { "Authorization": 'Bearer ' + self.access_token }
+        payload = { "gameMode": game_mode }
+        r = requests.post(url=sign_auto_url, json=payload, headers=headers, verify=False)
+        print('sign_for_auto_match: ', r)
+
+    def __read(self):
+        message = None
+        while message != "exit()":
+            message = input()
+            args = message.split()
+            if len(args) > 0 and message != "exit()":
+                method = args[0]
+                self.current_hub_connection.send(method, args[1:])
+
+        self.current_hub_connection.stop()
+        sys.exit(0)
+
+    def __exit(self):
+        print('killing the process... SIGINT')
+        os.kill(os.getpid(), signal.SIGINT)
 
 email = 'player7@vovaa'
 password = 'vovaa'
@@ -22,140 +124,5 @@ login_data = {
     'password': password
 }
 
-base_url = 'https://localhost:7194'
-lobby_hub_url = base_url + '/hubs/lobby'
-game_hub_url = base_url + '/hubs/game'
-login_url = base_url + '/api/v1/Identity/Login'
-sign_auto_url = base_url + '/api/v1/Lobby/SignForAutoMatch'
-
-game_hub = None
-
-local_context = {}
-
-def log_in():
-    r = requests.post(url=login_url, json=login_data, verify=False)
-    response_json = r.json()
-    access_token = response_json['accessToken']
-    id = response_json['id']
-    return id, access_token
-
-def sign_for_auto_match(game_mode):
-    print('Signing for ' + game_mode + ' match...')
-    headers = { "Authorization": 'Bearer ' + token }
-    payload = { "gameMode": game_mode }
-    r = requests.post(url=sign_auto_url, json=payload, headers=headers, verify=False)
-    print('sign_for_auto_match: ', r)
-
-# handler = logging.StreamHandler()
-# handler.setLevel(logging.DEBUG)
-def connect_to_hub(url):
-    return HubConnectionBuilder()\
-        .with_url(url, options={
-            "access_token_factory": lambda: token,
-            "verify_ssl": False
-        }) \
-        .with_automatic_reconnect({
-            "type": "interval",
-            "keep_alive_interval": 10,
-            "intervals": [1, 3, 5, 6, 7, 87, 3]
-        }) \
-        .build()
-        # .configure_logging(logging.DEBUG, socket_trace=True, handler=handler)
-
-def on_connected_to_lobby():
-    print('Connected to Lobby')
-    sign_for_auto_match('Casual')
-
-def on_lobby_update(messages):
-    print('got LobbyUpdate')
-    message = messages[0]
-    argObj = json.loads(message)
-
-    action = argObj['Action']
-    print('LobbyUpdate: Action: ' + action)
-    if action == 'Started':
-        print('Lobby: STARTED! Connecting to game hub...')
-        lobby_hub.stop()
-        init_game_hub()
-
-def init_game_hub():
-    print('gonna start game')
-    game_hub = connect_to_hub(game_hub_url)
-
-    def on_connected_to_game():
-        print('connected to Game, sending ReadyToPlay...')
-        game_hub.send('ReadyToPlay', [])
-
-    game_hub.on_open(on_connected_to_game)
-    game_hub.on_close(lambda: print("Game closed"))
-    for signal_type_enum in GameSignal:
-        game_hub.on(signal_type_enum.value, \
-            lambda msgs: on_game_message(signal_type_enum.value, msgs))
-    game_hub.start()
-
-
-def on_game_message(signal_type, message_list):
-    print('--- got signal ' + signal_type)
-    for message in message_list:
-        message_type = type(message)
-        if message_type is str:
-            message = json.loads(message)
-
-        message_type = type(message)
-        if message_type is list:
-            for item in message:
-                # item_type = type(item)
-                handle_single_message_event(item)
-        elif message_type is dict:
-            handle_single_message_event(message)
-
-def send_choose_card():
-    # PerformCommand
-    pass
-
-def handle_single_message_event(message):
-    message_processor = local_context.get('message_processor')
-    if message_processor is None:
-        message_processor = MessageProcessor(user_id)
-        local_context['message_processor'] = message_processor
-
-        message_processor.on_choose_card(lambda c:
-            print(' * fire: on_choose_card', c))
-
-        message_processor.on_play_card(lambda c:
-            print(' * fire: on_play_card', c))
-
-        message_processor.on_attack_target(lambda c, t:
-            print(' * fire: on_attack_target', c, t))
-
-        message_processor.on_pass_turn(lambda:
-            print(' * fire: on_pass_turn'))
-
-    message_processor.handle_single_message_event(message)
-
-user_id, token = log_in()
-print('Login success, user id:', user_id, 'token:', token)
-
-lobby_hub = connect_to_hub(lobby_hub_url)
-
-lobby_hub.on_open(on_connected_to_lobby)
-lobby_hub.on_close(lambda: print("Lobby closed"))
-
-lobby_hub.on("LobbyUpdate", on_lobby_update)
-lobby_hub.start()
-
-message = None
-
-# Do login
-
-while message != "exit()":
-    message = input()
-    args = message.split()
-    if len(args) > 0 and message != "exit()":
-        method = args[0]
-        lobby_hub.send(method, message[1:])
-
-lobby_hub.stop()
-game_hub.stop()
-
-sys.exit(0)
+app = App(login_url, login_data)
+app.start()

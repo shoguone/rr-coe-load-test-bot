@@ -30,3 +30,13 @@ class RuntimeObject():
     def is_owner_player(self):
         return self.belongs_to_user(self.player_id)
 
+    def set_moves(self, value):
+        moves = self.runtime_object.get('MoveCount')
+        if moves is not None:
+            moves['Current'] = value
+
+    def set_attack_hero_moves(self, value):
+        moves = self.runtime_object.get('AttackHeroMove')
+        if moves is not None:
+            moves['Current'] = value
+

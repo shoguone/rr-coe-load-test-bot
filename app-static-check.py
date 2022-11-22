@@ -26,7 +26,7 @@ message_processor.on_pass_turn(lambda:
 for event in mock_instance.logic_events:
     message_processor.handle_single_message_event(event)
 
-cards = message_processor.get_runtime_context().cards
+cards = context.cards
 hand_cards = list(filter(RuntimeCard.is_state_in_hand, cards))
 table_cards = list(filter(RuntimeCard.is_state_on_table, cards))
 choose_cards = list(filter(RuntimeCard.is_state_in_choose, cards))
