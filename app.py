@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import signal
+import time
 import requests
 from signalrcore.hub_connection_builder import HubConnectionBuilder
 import sys
@@ -15,10 +16,11 @@ login_url = base_url + '/api/v1/Identity/Login'
 sign_auto_url = base_url + '/api/v1/Lobby/SignForAutoMatch'
 
 class App():
-    def __init__(self, login_url, login_data) -> None:
+    def __init__(self, login_data) -> None:
         self.login_url = login_url
         self.login_data = login_data
         self.current_hub_connection = None
+        self.is_waiting = True
 
     def start(self):
         self.__request_log_in()
@@ -26,7 +28,10 @@ class App():
 
         self.current_hub_connection = self.__init_lobby_hub()
 
-        self.__read()
+        self.__wait()
+
+    def stop(self):
+        self.is_waiting = False
 
     def __init_lobby_hub(self):
         lobby_hub = self.__connect_to_hub(lobby_hub_url)
@@ -42,7 +47,8 @@ class App():
         print('Connecting to GameHub...')
         game_hub_connection = self.__connect_to_hub(game_hub_url)
         game_hub = GameHub(game_hub_connection, self.player_id)
-        game_hub.on_exit(self.__exit)
+        # game_hub.on_exit(self.__exit)
+        game_hub.on_exit(self.stop)
         game_hub.start()
         return game_hub_connection
 
@@ -94,6 +100,11 @@ class App():
         r = requests.post(url=sign_auto_url, json=payload, headers=headers, verify=False)
         print('sign_for_auto_match: ', r)
 
+    def __wait(self):
+        while self.is_waiting:
+            print('? wait iter')
+            time.sleep(5)
+
     def __read(self):
         message = None
         while message != "exit()":
@@ -110,19 +121,19 @@ class App():
         print('killing the process... SIGINT')
         os.kill(os.getpid(), signal.SIGINT)
 
-email = 'player7@vovaa'
-password = 'vovaa'
-if len(sys.argv) > 1:
-    email = sys.argv[1]
-if len(sys.argv) > 2:
-    password = sys.argv[2]
+# email = 'player7@vovaa'
+# password = 'vovaa'
+# if len(sys.argv) > 1:
+#     email = sys.argv[1]
+# if len(sys.argv) > 2:
+#     password = sys.argv[2]
 
-print(email)
+# print(email)
 
-login_data = {
-    'email': email,
-    'password': password
-}
+# login_data = {
+#     'email': email,
+#     'password': password
+# }
 
-app = App(login_url, login_data)
-app.start()
+# app = App(login_url, login_data)
+# app.start()
