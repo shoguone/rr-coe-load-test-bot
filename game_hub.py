@@ -1,20 +1,25 @@
 import json
 from typing import Callable
-from behaviour_processor import BehaviourProcessor
-from cmd_params_model import CmdParamsModel
-from game_signal_enum import GameSignal
-from message_processor import MessageProcessor
+
+from model.cmd_params_model import CmdParamsModel
+from model.game_signal_enum import GameSignal
+from processors.behaviour_processor import BehaviourProcessor
+from processors.message_processor import MessageProcessor
+from signalr_hub_user import SignalRHubUser
 
 
 class GameHub():
-    def __init__(self, hub_connection, player_id) -> None:
+    def __init__(self, hub_user: SignalRHubUser, player_id) -> None:
         self.exit_handler = None
         self.player_id = player_id
-        self.hub_connection = hub_connection
-        hub_connection.on_open(self.__on_connected_to_game)
-        hub_connection.on_close(lambda: print("Game closed"))
+
+        self.hub_user = hub_user
+        self.hub_connection = hub_user.hub
+        self.hub_connection.on_open(self.__on_connected_to_game)
+        self.hub_connection.on_close(lambda: print("Game closed"))
+
         for signal_type_enum in GameSignal:
-            hub_connection.on(signal_type_enum.value, \
+            self.hub_user.on(signal_type_enum.value, \
                 lambda msgs: self.__on_game_message(signal_type_enum.value, msgs))
 
         self.message_processor = MessageProcessor(player_id)
@@ -29,7 +34,7 @@ class GameHub():
 
     def __on_connected_to_game(self):
         print('connected to Game, sending ReadyToPlay...')
-        self.hub_connection.send('ReadyToPlay', [])
+        self.hub_user.send('ReadyToPlay', [])
 
     def __on_context_init(self, context):
         self.behaviour_processor = BehaviourProcessor(self.player_id, context)
@@ -68,25 +73,25 @@ class GameHub():
 
     def __send_mulligan(self):
         print(' * fire: on_mulligan')
-        self.hub_connection.send('PerformCommand',
+        self.hub_user.send('PerformCommand',
             CmdParamsModel.create_mulligan_cmd_params())
 
     def __send_choose_card(self, card_id):
         print(' * fire: on_choose_card', card_id)
-        self.hub_connection.send('PerformCommand',
+        self.hub_user.send('PerformCommand',
             CmdParamsModel.create_choose_card_cmd_params(card_id))
 
     def __send_play_card(self, card_id):
         print(' * fire: on_play_card', card_id)
-        self.hub_connection.send('PerformCommand',
+        self.hub_user.send('PerformCommand',
             CmdParamsModel.create_play_card_cmd_params(card_id))
 
     def __send_attack_target(self, card_and_target_ids):
         print(' * fire: on_attack_target', *card_and_target_ids)
-        self.hub_connection.send('PerformCommand',
+        self.hub_user.send('PerformCommand',
             CmdParamsModel.create_attack_target_cmd_params(*card_and_target_ids))
 
     def __send_pass_turn(self):
         print(' * fire: on_pass_turn')
-        self.hub_connection.send('PerformCommand',
+        self.hub_user.send('PerformCommand',
             CmdParamsModel.create_pass_turn_cmd_params())

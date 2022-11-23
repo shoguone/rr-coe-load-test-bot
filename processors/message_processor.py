@@ -1,10 +1,10 @@
-import json
 from typing import Callable
-from runtime_context import RuntimeContext
-from game_event_enum import GameEvent
+
+from model.runtime_context import RuntimeContext
+from model.game_event_enum import GameEvent
 
 class MessageProcessor():
-    def __init__(self, player_id) -> None:
+    def __init__(self, player_id: str) -> None:
         self.player_id = player_id
         self.ctx = None
         self.handlers = {
@@ -54,10 +54,6 @@ class MessageProcessor():
 
     def __handle_initialize_game(self, message):
         print("\tINIT signal")
-        # f = open('initialize_game.json', 'w')
-        # f.write(json.dumps(message))
-        # f.close()
-        # print('stored INIT to file')
         self.ctx = RuntimeContext(self.player_id, message)
         self.__fire_event('on_game_initialized', self.ctx)
 

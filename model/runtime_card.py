@@ -1,6 +1,7 @@
 import re
-from runtime_card_state_enum import RuntimeCardState
-from runtime_object import RuntimeObject
+
+from model.runtime_card_state_enum import RuntimeCardState
+from model.runtime_object import RuntimeObject
 
 class RuntimeCard(RuntimeObject):
     # COE-0000005-Card-Creature search by regex

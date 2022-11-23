@@ -1,26 +1,23 @@
-from locust import User, task, between
+from locust import HttpUser, task, between
 
-from app import App
+from bot_client import BotClient
+from signalr_hub_user import SignalRHubUser
 from users_pool import UsersPool
 
-class MyUser(User):
+class BotUser(HttpUser, SignalRHubUser):
     wait_time = between(1, 5)
 
     users_pool = UsersPool()
 
-    def __init__(self, environment):
-        super().__init__(environment)
-        self.stop = False
-
     @task
     def run_bot(self):
-        print('run_bot')
-        app = App(self.login_data)
-        app.start()
-        print('finish bot')
+        print('run_bot ', self.login_data['email'])
+        self.bot = BotClient(self.host, self.login_data, self.client, self)
+        self.bot.start()
+        print('finish bot', self.login_data['email'])
 
     def on_start(self):
-        email = MyUser.users_pool.get_email()
+        email = BotUser.users_pool.get_email()
         password = 'vovaa'
 
         print(email)
@@ -29,3 +26,7 @@ class MyUser(User):
             'email': email,
             'password': password
         }
+
+    def on_stop(self):
+        self.bot.stop()
+        return super().on_stop()

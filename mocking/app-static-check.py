@@ -1,6 +1,6 @@
-from message_processor import MessageProcessor
+from processors.message_processor import MessageProcessor
 from my_mock import MyMock
-from runtime_card import RuntimeCard
+from model.runtime_card import RuntimeCard
 
 mock_instance = MyMock()
 init_response = mock_instance.get_init_response()

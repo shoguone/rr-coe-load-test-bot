@@ -1,7 +1,8 @@
 from typing import Tuple
-from player_context import PlayerContext
-from runtime_card import RuntimeCard
-from runtime_object import RuntimeObject
+
+from model.player_context import PlayerContext
+from model.runtime_card import RuntimeCard
+from model.runtime_object import RuntimeObject
 
 
 class RuntimeContext():

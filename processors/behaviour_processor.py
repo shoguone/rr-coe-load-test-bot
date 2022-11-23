@@ -2,9 +2,11 @@ from threading import Thread
 import time
 from typing import Callable
 
+from model.runtime_context import RuntimeContext
+
 
 class BehaviourProcessor():
-    def __init__(self, player_id, runtime_context) -> None:
+    def __init__(self, player_id: str, runtime_context: RuntimeContext) -> None:
         self.player_id = player_id
         self.has_fired_mulligan = False
         self.ctx = runtime_context
