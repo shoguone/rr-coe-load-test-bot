@@ -52,7 +52,9 @@ class BotClient():
 
     def __on_connected_to_lobby(self):
         print('Connected to Lobby')
-        self.__request_sign_for_auto_match('Casual')
+        response = self.__request_sign_for_auto_match('Casual')
+        if not response.ok:
+            self.stop()
 
     def __on_lobby_update(self, messages):
         print('got LobbyUpdate')
@@ -78,9 +80,10 @@ class BotClient():
     def __request_sign_for_auto_match(self, game_mode):
         print('Signing for ' + game_mode + ' match...')
         headers = { "Authorization": 'Bearer ' + self.access_token }
-        payload = { "gameMode": game_mode }
+        payload = { "MatchMode": game_mode }
         r = self.http_client.post(url=self.sign_auto_url, json=payload, headers=headers, verify=False)
         print('sign_for_auto_match: ', r)
+        return r
 
     def __wait(self):
         while self.is_waiting:
