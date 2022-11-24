@@ -1,3 +1,5 @@
+import logging
+
 from processors.message_processor import MessageProcessor
 from my_mock import MyMock
 from model.runtime_card import RuntimeCard
@@ -12,16 +14,16 @@ message_processor.handle_single_message_event(init_response)
 context = message_processor.get_runtime_context()
 
 message_processor.on_choose_card(lambda c:
-    print('\tfire: on_choose_card', c))
+    logging.debug('\tfire: on_choose_card', c))
 
 message_processor.on_play_card(lambda c:
-    print('\tfire: on_play_card', c))
+    logging.debug('\tfire: on_play_card', c))
 
 message_processor.on_attack_target(lambda c, t:
-    print('\tfire: on_attack_target', c, t))
+    logging.debug('\tfire: on_attack_target', c, t))
 
 message_processor.on_pass_turn(lambda:
-    print('\tfire: on_pass_turn'))
+    logging.debug('\tfire: on_pass_turn'))
 
 for event in mock_instance.logic_events:
     message_processor.handle_single_message_event(event)
@@ -32,4 +34,4 @@ table_cards = list(filter(RuntimeCard.is_state_on_table, cards))
 choose_cards = list(filter(RuntimeCard.is_state_in_choose, cards))
 choose_my = list(filter(RuntimeCard.is_owner_player, choose_cards))
 
-print('finish')
+logging.debug('finish')

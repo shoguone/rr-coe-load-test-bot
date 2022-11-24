@@ -2,12 +2,16 @@ from threading import Thread
 import time
 from typing import Callable
 
+import logging_utility
 from model.runtime_context import RuntimeContext
 
 
 class BehaviourProcessor():
     def __init__(self, player_id: str, runtime_context: RuntimeContext) -> None:
+        self.logger = logging_utility.create_file_logger(player_id, __name__)
+
         self.player_id = player_id
+
         self.has_fired_mulligan = False
         self.ctx = runtime_context
         self.handlers = {
@@ -18,6 +22,8 @@ class BehaviourProcessor():
             'on_pass_turn': []
         }
 
+        self.is_processing_paused = False
+
         self.worker_period_secs = 3
         self.worker_enemy_period_secs = 6
         self.stop_worker = False
@@ -25,6 +31,9 @@ class BehaviourProcessor():
 
     def start(self):
         self.worker_thread.start()
+
+    def release(self):
+        self.is_processing_paused = True
 
     def on_mulligan(self, callback_function: Callable):
         self.handlers['on_mulligan'].append(callback_function)
@@ -43,13 +52,13 @@ class BehaviourProcessor():
 
 
     def __process(self):
-        print('== process ==')
+        self.logger.debug('== process ==')
 
         if self.__try_perform_mulligan():
             return
 
         if not self.ctx.is_player_turn():
-            print(' = not my turn')
+            self.logger.debug(' = not my turn')
             return
 
         if self.__try_perform_choose_card():
@@ -119,9 +128,11 @@ class BehaviourProcessor():
     def __worker_tick(self):
         while not self.stop_worker:
             try:
-                self.__process()
+                if self.is_processing_paused:
+                    self.is_processing_paused = False
+                    self.__process()
             except Exception as ex:
-                print('!!! behaviour exception', ex)
+                self.logger.error('__worker_tick %s', ex, exc_info=1)
             time.sleep(self.__get_tick_period())
 
     def __get_tick_period(self):

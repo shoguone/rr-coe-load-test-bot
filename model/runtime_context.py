@@ -1,5 +1,6 @@
 from typing import Tuple
 
+import logging_utility
 from model.player_context import PlayerContext
 from model.runtime_card import RuntimeCard
 from model.runtime_object import RuntimeObject
@@ -7,7 +8,9 @@ from model.runtime_object import RuntimeObject
 
 class RuntimeContext():
     def __init__(self, player_id, init_game_message) -> None:
-        self.self_id = player_id
+        self.logger = logging_utility.create_file_logger(player_id, __name__)
+
+        self.player_id = player_id
 
         players_contexts = init_game_message['PlayerContexts']
         runtime_data = init_game_message['RuntimeData']
@@ -19,10 +22,10 @@ class RuntimeContext():
             if self.player.get_is_first_mover() \
             else self.opponent.get_user_id()
         self.timer_state = 'Mulligan'
-        print('  ** self.timer_owner', self.timer_owner)
+        self.logger.debug('  ** self.timer_owner %s', self.timer_owner)
     
     def is_player_turn(self):
-        return self.timer_owner == self.self_id
+        return self.timer_owner == self.player_id
 
     def is_mulligan(self):
         return self.timer_state == 'Mulligan'
@@ -49,7 +52,7 @@ class RuntimeContext():
         opponent = None
         for item in players_contexts:
             player_context = PlayerContext(item)
-            if player_context.is_user_id(self.self_id):
+            if player_context.is_user_id(self.player_id):
                 player = player_context
             else:
                 opponent = player_context
@@ -60,9 +63,9 @@ class RuntimeContext():
         heroes = []
         pets = []
         for item in runtime_data:
-            runtime_object = RuntimeObject(item, self.self_id)
+            runtime_object = RuntimeObject(item, self.player_id)
             if runtime_object.is_card():
-                cards.append(RuntimeCard(item, self.self_id))
+                cards.append(RuntimeCard(item, self.player_id))
                 del runtime_object
             elif runtime_object.is_hero():
                 heroes.append(runtime_object)
